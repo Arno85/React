@@ -1,8 +1,22 @@
 .Person {
-    width: 60%;
-    margin: 16px auto;
-    border: 1px solid #eee;
-    box-shadow: 0 2px 3px #ccc;
-    padding: 10px;
-    text-align: center;
+	width: 60%;
+	margin: 16px auto;
+	border: 1px solid #eee;
+	box-shadow: 0 2px 3px #ccc;
+	padding: 10px;
+	text-align: center;
+}
+
+.button {
+	background-color: green;
+	color: white;
+	font: inherit;
+	border: 1px solid black;
+	padding: 8px;
+	cursor: pointer;
+}
+
+.button:hover {
+	background-color: lightgreen;
+	color: black;
 }
