@@ -3,6 +3,10 @@ import { PropTypes } from 'prop-types';
 import Person from './Person/Person';
 
 const Persons = (props) => {
+    console.log(`[Persons.js] Lifecycle hook - render
+    Do : Render HTML
+    Don't : Initialize or update state`);
+
     let persons = null;
 
     if (props.showPersons) {
