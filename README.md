@@ -2,8 +2,10 @@
 
 ## Create project
 
-- Run `create-react-app my-app`.
+- Run `npx create-react-app my-app`.
 - To add SCSS support, run `npm install node-sass`.
+
+> https://github.com/facebook/create-react-app
 
 ## Start Project
 
