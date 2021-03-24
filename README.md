@@ -12,4 +12,4 @@
 
 ## Start Project
 
-Run `npm start`. Open the app in http://localhost:3000.
+Run `npm run start`. Open the app in http://localhost:3000.
