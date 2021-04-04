@@ -5,8 +5,8 @@ import BurgerIngredient from './BurgerIngredient/BurgerIngredient';
 const burger = (props) => {
 	let ingredients = Object.keys(props.ingredients)
 		.map((k) => {
-			return [ ...Array(props.ingredients[k]) ].map((_, i) => {
-				return <BurgerIngredient key={k + i} type={k} />;
+			return [...Array(props.ingredients[k])].map((_, i) => {
+				return <BurgerIngredient key={ k + i } type={ k } />;
 			});
 		})
 		.reduce((arr, el) => {
@@ -18,9 +18,9 @@ const burger = (props) => {
 	}
 
 	return (
-		<div className={classes.burger}>
+		<div className={ classes.burger }>
 			<BurgerIngredient type="bread-top" />
-			{ingredients}
+			{ingredients }
 			<BurgerIngredient type="bread-bottom" />
 		</div>
 	);

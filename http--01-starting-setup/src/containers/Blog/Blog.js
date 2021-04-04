@@ -1,48 +1,47 @@
 import React, { Component } from 'react';
-import axios from '../../axios';
+import Posts from '../Posts/Posts';
+import { Route, NavLink, Switch, Redirect } from 'react-router-dom';
+import asyncComponent from '../../hoc/asyncComponent';
 
-import Post from '../../components/Post/Post';
-import FullPost from '../../components/FullPost/FullPost';
-import NewPost from '../../components/NewPost/NewPost';
 import './Blog.css';
+
+const AsyncNewPost = asyncComponent(() => import('../NewPost/NewPost'));
 
 class Blog extends Component {
     state = {
-        posts: [],
-        selectedPostId: null
-    }
-
-    async componentDidMount() {
-        const response = await axios.get('posts/?_limit=6');
-        const posts = response.data.map(post => ({ ...post, author: 'Max' }));
-        this.setState({ posts });
-    }
-
-    postSelectedHandler = (id) => {
-        this.setState({ selectedPostId: id })
+        auth: false
     }
 
     render() {
-        const posts = this.state.posts.map(post => {
-            return <Post
-                key={ post.id }
-                title={ post.title }
-                author={ post.author }
-                clicked={ () => this.postSelectedHandler(post.id) }
-            />
-        });
+        const admin = this.state.auth
+            ? <li><NavLink to="/admin">Admin</NavLink></li>
+            : null;
 
         return (
-            <div>
-                <section className="Posts">
-                    { posts }
-                </section>
-                <section>
-                    <FullPost id={ this.state.selectedPostId } />
-                </section>
-                <section>
-                    <NewPost />
-                </section>
+            <div className="Blog">
+                <header>
+                    <nav>
+                        <ul>
+                            <li><NavLink
+                                to="/posts">Posts</NavLink></li>
+                            <li><NavLink to={ {
+                                pathname: "/new-post",
+                                hash: '#submit',
+                                search: '?quick-submit=true'
+                            } }>New Post</NavLink></li>
+                            { admin }
+                        </ul>
+                    </nav>
+                </header>
+                {/* <Route path="/" exact render={ () => <Posts /> } />
+                <Route path="/new-post" render={ () => <NewPost /> } /> */}
+                <Switch>
+                    <Route path="/posts" component={ Posts } /> : null
+                    <Route path="/new-post" exact component={ AsyncNewPost } />
+                    { this.state.auth ? <Route path="/admin" exact render={ () => <h1>Admin</h1> } /> : null }
+                    <Route render={ () => <h1>Not Found!</h1> } />
+                    {/* <Redirect from="/" to="/posts" /> */ }
+                </Switch>
             </div>
         );
     }

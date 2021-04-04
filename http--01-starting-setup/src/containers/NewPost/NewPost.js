@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from '../../axios';
-
 import './NewPost.css';
+
 
 class NewPost extends Component {
     state = {
@@ -11,13 +11,13 @@ class NewPost extends Component {
     }
 
     postDataHandler = async () => {
-        const response = await axios.post('posts', {
+        await axios.post('posts', {
             title: this.state.title,
             body: this.state.content,
             author: this.state.author,
         });
 
-        console.log(response);
+        this.props.history.push('/posts');
     }
 
     render() {
