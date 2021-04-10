@@ -3,9 +3,10 @@ import classes from './Button.module.scss';
 
 const button = (props) => (
     <button
-        className={[classes.Button, classes[props.buttonType]].join(' ')}
-        onClick={props.clicked}>
-        {props.children}
+        disabled={ props.disabled }
+        className={ [classes.Button, classes[props.buttonType]].join(' ') }
+        onClick={ props.clicked }>
+        {props.children }
     </button>
 );
 
