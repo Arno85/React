@@ -1,4 +1,4 @@
-import './ChartBar.css';
+import styles from './ChartBar.module.scss';
 
 const ChartBar = (props) => {
     let barFillHeight = '0%';
@@ -8,11 +8,11 @@ const ChartBar = (props) => {
     }
 
     return (
-        <div className="chart-bar">
-            <div className="chart-bar__inner">
-                <div className="chart-bar__fill" style={ { height: barFillHeight } }></div>
+        <div className={ styles.ChartBar }>
+            <div className={ styles.Inner }>
+                <div className={ styles.Fill } style={ { height: barFillHeight } }></div>
             </div>
-            <div className="chart-bar__label">{ props.label }</div>
+            <div className={ styles.Label }>{ props.label }</div>
         </div>
     );
 }

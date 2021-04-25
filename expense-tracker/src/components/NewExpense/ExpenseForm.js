@@ -1,4 +1,4 @@
-import './ExpenseForm.css';
+import styles from './ExpenseForm.module.scss';
 import { useState } from 'react';
 
 const ExpenseForm = (props) => {
@@ -56,37 +56,35 @@ const ExpenseForm = (props) => {
     }
 
     return (
-        <form onSubmit={ submitExpenseDataHandler }>
-            <div className="new-expense__controls">
-                <div className="new-expense__control">
-                    <label>Title</label>
-                    <input
-                        type="text"
-                        value={ userInput.title }
-                        onChange={ titleChangedHandler } />
-                </div>
-                <div className="new-expense__control">
-                    <label>Amount</label>
-                    <input
-                        type="number"
-                        min="0.01"
-                        step="0.01"
-                        value={ userInput.amount }
-                        onChange={ amountChangedHandler } />
-                </div>
-                <div className="new-expense__control">
-                    <label>Date</label>
-                    <input
-                        type="date"
-                        min="2019-01-01"
-                        max="2022-12-31"
-                        value={ userInput.date }
-                        onChange={ dateChangedHandler } />
-                </div>
-                <div className="new-expense__actions">
-                    <button type="button" onClick={ cancelHandler }>Cancel</button>
-                    <button type="submit">Add Expense</button>
-                </div>
+        <form onSubmit={ submitExpenseDataHandler } className={ styles.ExpenseForm }>
+            <div>
+                <label>Title</label>
+                <input
+                    type="text"
+                    value={ userInput.title }
+                    onChange={ titleChangedHandler } />
+            </div>
+            <div>
+                <label>Amount</label>
+                <input
+                    type="number"
+                    min="0.01"
+                    step="0.01"
+                    value={ userInput.amount }
+                    onChange={ amountChangedHandler } />
+            </div>
+            <div>
+                <label>Date</label>
+                <input
+                    type="date"
+                    min="2019-01-01"
+                    max="2022-12-31"
+                    value={ userInput.date }
+                    onChange={ dateChangedHandler } />
+            </div>
+            <div className={ styles.Actions }>
+                <button type="button" onClick={ cancelHandler }>Cancel</button>
+                <button type="submit">Add Expense</button>
             </div>
         </form>
     );

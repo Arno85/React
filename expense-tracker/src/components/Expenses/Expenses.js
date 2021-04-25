@@ -1,6 +1,6 @@
 import Card from '../UI/Card';
 import ExpensesFilter from './ExpensesFilter';
-import './Expenses.css';
+import styles from './Expenses.module.scss';
 import { useState } from 'react';
 import ExpensesList from './ExpensesList';
 import ExpensesChart from './ExpensesChart';
@@ -15,7 +15,7 @@ const ExpenseList = (props) => {
     const filteredExpenses = props.expenses.filter(e => e.date.getFullYear() === filteredYear);
 
     return (
-        <Card className="expenses">
+        <Card className={ styles.expenses }>
             <ExpensesFilter
                 onFilter={ yearFilterHandler }
                 year={ filteredYear }

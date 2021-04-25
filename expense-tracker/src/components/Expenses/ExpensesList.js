@@ -1,5 +1,5 @@
 import ExpenseItem from './ExpenseItem';
-import './ExpensesList.css';
+import styles from './ExpensesList.module.scss';
 
 const ExpensesList = (props) => {
     if (props.expenses.length === 0) {
@@ -7,7 +7,7 @@ const ExpensesList = (props) => {
     }
 
     return (
-        <ul className="expenses-list">
+        <ul className={ styles.expensesList }>
             {props.expenses.map(e =>
                 <ExpenseItem
                     key={ e.id }

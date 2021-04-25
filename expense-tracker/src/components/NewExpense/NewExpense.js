@@ -1,5 +1,5 @@
 import ExpenseForm from './ExpenseForm';
-import './NewExpense.css';
+import styles from './NewExpense.module.scss';
 import { useState } from 'react';
 
 const NewExpense = (props) => {
@@ -29,7 +29,7 @@ const NewExpense = (props) => {
     }
 
     return (
-        <div className="new-expense">
+        <div className={ styles.NewExpense }>
             { newExpenseContent }
         </div>
     );
