@@ -6,10 +6,10 @@ const ExpenseDate = (props) => {
     const year = props.date.getFullYear();
 
     return (
-        <div className={ styles.ExpenseDate }>
-            <div className={ styles.Month }>{ month }</div>
-            <div className={ styles.Year }>{ year }</div>
-            <div className={ styles.Day }>{ day }</div>
+        <div className={ styles.expenseDate }>
+            <div className={ styles.month }>{ month }</div>
+            <div className={ styles.year }>{ year }</div>
+            <div className={ styles.day }>{ day }</div>
         </div>
     );
 }

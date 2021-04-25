@@ -8,11 +8,11 @@ const ChartBar = (props) => {
     }
 
     return (
-        <div className={ styles.ChartBar }>
-            <div className={ styles.Inner }>
-                <div className={ styles.Fill } style={ { height: barFillHeight } }></div>
+        <div className={ styles.chartBar }>
+            <div className={ styles.inner }>
+                <div className={ styles.fill } style={ { height: barFillHeight } }></div>
             </div>
-            <div className={ styles.Label }>{ props.label }</div>
+            <div className={ styles.label }>{ props.label }</div>
         </div>
     );
 }

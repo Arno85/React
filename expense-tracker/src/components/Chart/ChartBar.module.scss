@@ -1,10 +1,10 @@
-.ChartBar {
+.chartBar {
 	height: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 
-	.Inner {
+	.inner {
 		height: 100%;
 		width: 100%;
 		border: 1px solid #313131;
@@ -16,13 +16,13 @@
 		justify-content: flex-end;
 	}
 
-	.Fill {
+	.fill {
 		background-color: #4826b9;
 		width: 100%;
 		transition: all 0.3s ease-out;
 	}
 
-	.Label {
+	.label {
 		padding-top: 5px;
 		font-weight: bold;
 		font-size: 0.7rem;

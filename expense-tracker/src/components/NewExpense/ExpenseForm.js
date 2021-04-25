@@ -56,7 +56,7 @@ const ExpenseForm = (props) => {
     }
 
     return (
-        <form onSubmit={ submitExpenseDataHandler } className={ styles.ExpenseForm }>
+        <form onSubmit={ submitExpenseDataHandler } className={ styles.expenseForm }>
             <div>
                 <label>Title</label>
                 <input
@@ -82,7 +82,7 @@ const ExpenseForm = (props) => {
                     value={ userInput.date }
                     onChange={ dateChangedHandler } />
             </div>
-            <div className={ styles.Actions }>
+            <div className={ styles.actions }>
                 <button type="button" onClick={ cancelHandler }>Cancel</button>
                 <button type="submit">Add Expense</button>
             </div>

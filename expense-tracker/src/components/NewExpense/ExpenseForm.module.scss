@@ -1,4 +1,4 @@
-.ExpenseForm {
+.expenseForm {
 	display: flex;
 	flex-wrap: wrap;
 	margin-bottom: 1rem;
@@ -25,10 +25,10 @@
 			box-sizing: border-box;
 		}
 	}
-}
 
-.Actions {
-	display: flex;
-	align-self: center;
-	justify-content: space-between;
+	.actions {
+		display: flex;
+		align-self: center;
+		justify-content: space-between;
+	}
 }

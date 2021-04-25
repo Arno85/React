@@ -1,4 +1,4 @@
-.ExpenseDate {
+.expenseDate {
   display: flex;
   flex-direction: column;
   width: 5.5rem;
@@ -10,16 +10,16 @@
   align-items: center;
   justify-content: center;
 
-  .Month {
+  .month {
     font-size: 0.75rem;
     font-weight: bold;
   }
 
-  .Year {
+  .year {
     font-size: 0.75rem;
   }
 
-  .Day {
+  .day {
     font-size: 1.5rem;
     font-weight: bold;
   }

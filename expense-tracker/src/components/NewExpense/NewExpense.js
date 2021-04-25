@@ -29,7 +29,7 @@ const NewExpense = (props) => {
     }
 
     return (
-        <div className={ styles.NewExpense }>
+        <div className={ styles.newExpense }>
             { newExpenseContent }
         </div>
     );
