@@ -1,7 +1,7 @@
 import Expenses from './components/Expenses/Expenses';
 import NewExpense from './components/NewExpense/NewExpense';
 import { useState } from 'react';
-import styles from './App.module.scss';
+import './App.module.scss';
 
 function App() {
 
