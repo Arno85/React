@@ -7,6 +7,8 @@
 .input label {
 	font-weight: bold;
 	margin-right: 1rem;
+	flex: 1 1 auto;
+	width: 50px;
 }
 
 .input input {
@@ -15,4 +17,5 @@
 	border: 1px solid #ccc;
 	font: inherit;
 	padding-left: 0.5rem;
+	flex: 2 1 auto;
 }

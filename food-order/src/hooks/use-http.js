@@ -26,6 +26,7 @@ const useHttp = () => {
             dataAdapter(data);
         } catch (error) {
             setError(error.message);
+            throw new Error(error.message);
         } finally {
             setIsLoading(false);
         }
