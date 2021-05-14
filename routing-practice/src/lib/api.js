@@ -1,4 +1,4 @@
-const FIREBASE_DOMAIN = 'https://learning-react-arno85-default-rtdb.firebaseio.com';
+const FIREBASE_DOMAIN = 'https://learning-react-arno85-default-rtdb.firebaseio.com/';
 
 export async function getAllQuotes() {
   const response = await fetch(`${ FIREBASE_DOMAIN }/quotes.json`);
@@ -86,7 +86,7 @@ export async function getAllComments(quoteId) {
   for (const key in data) {
     const commentObj = {
       id: key,
-      text: data[key],
+      ...data[key],
     };
 
     transformedComments.push(commentObj);
