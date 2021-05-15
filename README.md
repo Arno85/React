@@ -10,7 +10,9 @@
 - To add SCSS support, run `npm i --save node-sass`.
 - To add types support, run `npm i --save props-types`
 - Http requests: `npm i --save axios`
-- Router: `npm i --save react-router react-router-dom`
+- Router: `npm i --save react-router-dom`
+- State Management: `npm i --save react-redux`
+- Animations: `npm i --save react-transition-group`
 
 ## Start Project
 
